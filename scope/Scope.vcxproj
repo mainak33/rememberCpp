@@ -108,7 +108,7 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>consoleMenu/includes</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -151,7 +151,7 @@
     <None Include="scopeLessons_L2_b.inc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\consoleMenu\consoleMenu.vcxproj">
+    <ProjectReference Include="..\consoleMenu\consoleMenu.vcxproj">
       <Project>{22f16ed3-4afb-4118-86ca-5e57b2e3917a}</Project>
     </ProjectReference>
   </ItemGroup>

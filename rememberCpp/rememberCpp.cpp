@@ -8,6 +8,7 @@ import lessons;
 #include <cassert>
 #include "osUtils.h"
 #include "ioUtils.h"
+#include "svUtils.h"
 
 template<class R, class ...Args>
 R test(std::function<R(Args ...)> fn, Args &&... args) {
@@ -94,11 +95,22 @@ int main(int argc, char* argv[]) {
     DigitInString dig = intstr.mostSignificantDigit();
     cout << dig.digit << '\n';*/
     
-    int x = getNumberInRange<int>(1, 6, "Choose an option from 1 to 5");
+    /*int x = getNumberInRange<int>(1, 6, "Choose an option from 1 to 5");
     cout << "Valid number : " << x << '\n';
     IntegerString xi = getNumberInRange<IntegerString>({"1"}, {"3"}, "Choose an option from 1 or 2");
     cout << "Valid option : " << xi << '\n';
-    return 0;
+    return 0;*/
+
+    svUtils::wrapToLength(
+        cout,
+        "string_view lines there is a a very long line \n.Something elsecanbedone thisisaverylongcontiguouswordwithoutadelimiter then thereare three newlines\n \n\nfollowedbysomelongibberish ",
+        {
+            "   ",
+            20,
+            " ",
+            0
+        }
+    );
 
     
 }
