@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "remembercpp", "scope\Scope.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "consoleMenu", "consoleMenu\consoleMenu.vcxproj", "{22F16ED3-4AFB-4118-86CA-5E57B2E3917A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "consoleMenu\test\test.vcxproj", "{FE889109-70E6-4144-8904-0D0CFCF37555}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{22F16ED3-4AFB-4118-86CA-5E57B2E3917A}.Release|x64.Build.0 = Release|x64
 		{22F16ED3-4AFB-4118-86CA-5E57B2E3917A}.Release|x86.ActiveCfg = Release|Win32
 		{22F16ED3-4AFB-4118-86CA-5E57B2E3917A}.Release|x86.Build.0 = Release|Win32
+		{FE889109-70E6-4144-8904-0D0CFCF37555}.Debug|x64.ActiveCfg = Debug|x64
+		{FE889109-70E6-4144-8904-0D0CFCF37555}.Debug|x64.Build.0 = Debug|x64
+		{FE889109-70E6-4144-8904-0D0CFCF37555}.Debug|x86.ActiveCfg = Debug|Win32
+		{FE889109-70E6-4144-8904-0D0CFCF37555}.Debug|x86.Build.0 = Debug|Win32
+		{FE889109-70E6-4144-8904-0D0CFCF37555}.Release|x64.ActiveCfg = Release|x64
+		{FE889109-70E6-4144-8904-0D0CFCF37555}.Release|x64.Build.0 = Release|x64
+		{FE889109-70E6-4144-8904-0D0CFCF37555}.Release|x86.ActiveCfg = Release|Win32
+		{FE889109-70E6-4144-8904-0D0CFCF37555}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
