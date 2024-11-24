@@ -135,20 +135,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\concepts\conceptsLessons.ixx" />
+    <ClCompile Include="..\rememberCpp\conceptsLessons.ixx" />
     <ClCompile Include="..\rememberCpp\lessons.ixx" />
     <ClCompile Include="..\rememberCpp\printCode.ixx" />
     <ClCompile Include="..\rememberCpp\rememberCpp.cpp" />
-    <ClCompile Include="..\type\typeLessons.cpp" />
-    <ClCompile Include="scopeLessons.ixx" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\type\typeLessons.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="scopeLessons_L1.inc" />
-    <None Include="scopeLessons_L2_a.inc" />
-    <None Include="scopeLessons_L2_b.inc" />
+    <ClCompile Include="..\rememberCpp\scopeLessons.ixx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\consoleMenu\consoleMenu.vcxproj">

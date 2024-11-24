@@ -8,17 +8,8 @@
     <Filter Include="rememberCpp">
       <UniqueIdentifier>{d3615c98-4edd-4779-a346-5b6927a78dcc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="scope">
-      <UniqueIdentifier>{be9c4c23-4827-4b51-b72d-f8f588f1818e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="type">
-      <UniqueIdentifier>{2ee0a706-9256-45c5-a6a4-a4752d2efad0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="concepts">
+    <Filter Include="lessons">
       <UniqueIdentifier>{e4fe06bd-5e4b-44f5-8562-9029bb84e2a1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="modules">
-      <UniqueIdentifier>{db67712f-8e97-4e36-b1fd-c4288a67d7d5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -28,33 +19,14 @@
     <ClCompile Include="..\rememberCpp\printCode.ixx">
       <Filter>rememberCpp</Filter>
     </ClCompile>
-    <ClCompile Include="scopeLessons.ixx">
-      <Filter>scope</Filter>
-    </ClCompile>
-    <ClCompile Include="..\type\typeLessons.cpp">
-      <Filter>type</Filter>
-    </ClCompile>
-    <ClCompile Include="..\concepts\conceptsLessons.ixx">
-      <Filter>concepts</Filter>
-    </ClCompile>
     <ClCompile Include="..\rememberCpp\lessons.ixx">
       <Filter>rememberCpp</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\type\typeLessons.h">
-      <Filter>type</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="scopeLessons_L1.inc">
-      <Filter>scope</Filter>
-    </None>
-    <None Include="scopeLessons_L2_a.inc">
-      <Filter>scope</Filter>
-    </None>
-    <None Include="scopeLessons_L2_b.inc">
-      <Filter>scope</Filter>
-    </None>
+    <ClCompile Include="..\rememberCpp\conceptsLessons.ixx">
+      <Filter>lessons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rememberCpp\scopeLessons.ixx">
+      <Filter>lessons</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
