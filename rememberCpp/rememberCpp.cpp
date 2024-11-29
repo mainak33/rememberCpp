@@ -9,6 +9,7 @@ import lessons;
 #include "osUtils.h"
 #include "ioUtils.h"
 #include "svUtils.h"
+#include "consoleMenu.h"
 
 template<class R, class ...Args>
 R test(std::function<R(Args ...)> fn, Args &&... args) {
@@ -64,6 +65,8 @@ using osUtils::clearScreen;
 using ioUtils::getNumberInRange;
 using ioUtils::IntegerString;
 using DigitInString = IntegerString::DigitInString;
+namespace cm = consoleMenu;
+
 int main(int argc, char* argv[]) {
     
     for (auto &lessonRef : lessons::cppLessons()) {
@@ -111,4 +114,69 @@ int main(int argc, char* argv[]) {
             0
         }
     );
+    cm::Menu mainMenu{};
+    cm::Menu::optionalNodeRef addedNodeRef =
+        mainMenu.addChildNodeAtPath(
+            {},
+            cm::MenuContents{
+                .brief = {"Menu Item 1"},
+                .details = {"Some Details 1"}
+            },
+            cm::MenuSettings{}
+        );
+    addedNodeRef =
+        mainMenu.addChildNodeAtPath(
+            {},
+            cm::MenuContents{
+                .brief = {"Menu Item 2"},
+                .details = {"Some Details 2"}
+            },
+            cm::MenuSettings{}
+        );
+    addedNodeRef =
+        mainMenu.addChildNodeAtPath(
+            {},
+            cm::MenuContents{
+                .brief = {"Menu Item 3"},
+                .details = {"Some Details 3"}
+            },
+            cm::MenuSettings{}
+        );
+    addedNodeRef =
+        mainMenu.addChildNodeAtPath(
+            {{1}},
+            cm::MenuContents{
+                .brief = {"Menu Item 2.1"},
+                .details = {"Some Details 2.1"}
+            },
+            cm::MenuSettings{
+                .briefIndentSpaces = 4
+            }
+        );
+        mainMenu.addChildNodeAtPath(
+            {{1}},
+            cm::MenuContents{
+                .brief = {"Menu Item 2.2"},
+                .details = {"Some Details 2.2"}
+            },
+            cm::MenuSettings{
+                .briefIndentSpaces = 4
+            }
+        );
+       addedNodeRef =
+        mainMenu.addChildNodeAtPath(
+            {{2}},
+            cm::MenuContents{
+                .brief = {"Menu Item 3.1"},
+                .details = {"Some Details 3.1"}
+            },
+            cm::MenuSettings{
+                .briefIndentSpaces = 4
+            }
+        );
+
+    std::vector<unsigned short> v{1};
+    cout << '\n';
+    mainMenu.getMenuFromRootPath(cout, {{1,1}});
+
 }
