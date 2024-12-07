@@ -1,11 +1,13 @@
 //import scopeLessons;
 import conceptsLessons;
-import <functional>;
-import <string>;
-import <iostream>;
 import lessons;
 
+#include <functional>
+#include <string>
+#include <iostream>
+#include <sstream>
 #include <cassert>
+
 #include "osUtils.h"
 #include "ioUtils.h"
 #include "svUtils.h"
@@ -60,6 +62,9 @@ T1 invokeTemplateInvoke(isInvocabletoResult< T1, TARGS...> auto fn, TARGS &&... 
 
 using std::cin;
 using std::cout;
+using std::stringstream;
+using std::istringstream;
+using std::ostringstream;
 using osUtils::OS;
 using osUtils::clearScreen;
 using ioUtils::getNumberInRange;
@@ -97,12 +102,16 @@ int main(int argc, char* argv[]) {
     ioUtils::IntegerString intstr{"-0000007699806578356817"};
     DigitInString dig = intstr.mostSignificantDigit();
     cout << dig.digit << '\n';*/
-    
-    /*int x = getNumberInRange<int>(1, 6, "Choose an option from 1 to 5");
-    cout << "Valid number : " << x << '\n';
-    IntegerString xi = getNumberInRange<IntegerString>({"1"}, {"3"}, "Choose an option from 1 or 2");
-    cout << "Valid option : " << xi << '\n';
-    return 0;*/
+    istringstream is{"3"};
+    ostringstream os{};
+    auto testIp = getNumberInRange<int>(-1, 3, "Choose an option from 1 to 5",is,os);
+    cout << "Number was : " << testIp.value_or(-999999) << '\n';
+    auto userIp = getNumberInRange<int>(1, 6, "Choose an option from 1 to 6", cin, cout);
+    cout << "Number was : " << userIp.value_or(-999999) << '\n';
+    //cout << "Valid number : " << x << '\n';
+    //IntegerString xi = getNumberInRange<IntegerString>({"1"}, {"3"}, "Choose an option from 1 or 2");
+    //cout << "Valid option : " << xi << '\n';
+
 
     svUtils::wrapToLength(
         cout,
@@ -178,5 +187,7 @@ int main(int argc, char* argv[]) {
     std::vector<unsigned short> v{1};
     cout << '\n';
     mainMenu.getMenuFromRootPath(cout, {{1,1}});
+
+    return 0;
 
 }
