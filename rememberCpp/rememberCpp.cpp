@@ -2,12 +2,12 @@
 import conceptsLessons;
 import lessons;
 
+#include <algorithm>
 #include <functional>
 #include <string>
 #include <iostream>
 #include <sstream>
 #include <cassert>
-
 #include "osUtils.h"
 #include "ioUtils.h"
 #include "svUtils.h"
@@ -97,17 +97,17 @@ int main(int argc, char* argv[]) {
     
     clearScreen();
     //assert(IntegerString {"-0000007699806578356817" } > IntegerString{ "+000007" });
-    IntegerString{"0"};
+    //IntegerString{"0"};
    /* std::string x{"76356817"};
     ioUtils::IntegerString intstr{"-0000007699806578356817"};
     DigitInString dig = intstr.mostSignificantDigit();
     cout << dig.digit << '\n';*/
-    istringstream is{"3"};
+    /*istringstream is{"3"};
     ostringstream os{};
     auto testIp = getNumberInRange<int>(-1, 3, "Choose an option from 1 to 5",is,os);
     cout << "Number was : " << testIp.value_or(-999999) << '\n';
     auto userIp = getNumberInRange<int>(1, 6, "Choose an option from 1 to 6", cin, cout);
-    cout << "Number was : " << userIp.value_or(-999999) << '\n';
+    cout << "Number was : " << userIp.value_or(-999999) << '\n';*/
     //cout << "Valid number : " << x << '\n';
     //IntegerString xi = getNumberInRange<IntegerString>({"1"}, {"3"}, "Choose an option from 1 or 2");
     //cout << "Valid option : " << xi << '\n';
@@ -186,8 +186,12 @@ int main(int argc, char* argv[]) {
 
     std::vector<unsigned short> v{1};
     cout << '\n';
-    mainMenu.getMenuFromRootPath(cout, {{1,1}});
-
+    mainMenu.getMenuFromRootPath(cout, {{0}});
+    //mainMenu.getMenuFromRootPath(cout, {{1}});
+    //mainMenu.getMenuFromRootPath(cout, {{1,1}});
+    mainMenu.changeMenu(cout,{{0}},{{1,1}});
+    mainMenu.getMenuFromRootPath(cout,{std::vector<unsigned short>{}});
+    mainMenu.displayMenu(cin, cout);
     return 0;
 
-}
+}   
